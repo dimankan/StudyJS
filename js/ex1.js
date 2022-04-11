@@ -209,10 +209,60 @@ console.log("Предполагается что запущено в брауз�
 // let age1 = prompt("Сколько вам лет?", "28");
 // console.log(age1);
 
-// Confirm - модальное окно с вопросом, который возвращает bool. result = confirm(question);
-let isCar = confirm("У тебя есть машина?");
-console.log(isCar);
+// // Confirm - модальное окно с вопросом, который возвращает bool. result = confirm(question);
+// let isCar = confirm("У тебя есть машина?");
+// console.log(isCar);
 
+//#endregion
+
+//#endregion
+//#region #5: арифметические операции: +, -, *, /, **, %, ++, --
+console.log("//#region #5: арифметические операции: +, -, *, /, **, %, ++, --");
+
+//#region 20. Унарный минус
+console.log("//#region 20. Унарный минус");
+
+let a8 = 1;
+a8=-a8;   //унарный минус // -1
+console.log(a8);
+
+// Порой удобно вместо явной конвертации со string в number использовать унарный оператор
+
+let a10 = "5";
+-a10;
+console.log(typeof a10, a10); // string 5
+console.log(typeof -a10, -a10); // number -5
+
+let a11 = -a10;
+console.log(typeof a11, a11);
+
+//#endregion
+//#region 21. Бинарный минус 
+console.log("//#region 21. Бинарный минус");
+let a9 = 1, b9 = 2;
+console.log(b9-a9);    //бинарный минус // 1
+
+// Если один string а другой number, то string конвертируется в number
+let x = "2.8", y = 7.3;
+let xy = x-y;
+console.log(xy); // 4.5
+console.log(typeof x); // string
+console.log(typeof xy); // number
+//#endregion
+//#region 22. 
+console.log("");
+//#endregion
+//#region 23. 
+console.log("");
+//#endregion
+//#region 24. 
+console.log("");
+//#endregion
+//#region 25. 
+console.log("");
+//#endregion
+//#region 26. 
+console.log("");
 //#endregion
 
 //#endregion
