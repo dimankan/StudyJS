@@ -12,7 +12,7 @@ console.log("//#region 1. Просто прогон и создании пере
 let user = "ALex",
     age = 25,
     email = 'sdfsdf@fg.ru';
- 
+
 console.log(user);
 console.log(age);
 console.log(email);
@@ -33,7 +33,7 @@ const PI = 3.1415;
 
 console.log(PI);
 //#endregion
- //#endregion
+//#endregion
 //#region #3: примитивные типы number, string, Infinity, NaN, boolean, null, undefined, Symbol
 console.log("#3: примитивные типы number, string, Infinity, NaN, boolean, null, undefined, Symbol");
 
@@ -48,7 +48,7 @@ console.log(typeof b);
 //#region 5. Специальные числовые значения
 console.log("//#region 5. Специальные числовые значения");
 
-let c = 1/0;
+let c = 1 / 0;
 let d = Infinity;
 let e = -Infinity;
 let inf = 1e1000;
@@ -60,7 +60,7 @@ console.log(inf);
 //#endregion 
 //#region 6. Не число NaN
 console.log("//#region 6. Не число NaN");
-let a1 = "Строка"/2;
+let a1 = "Строка" / 2;
 console.log(a1);
 //#endregion
 //#region 7. String
@@ -124,4 +124,95 @@ let id = Symbol();
 let id2 = Symbol("id");
 console.log(id === id2); // сравнение уникальных значение. false
 //#endregion
+//#endregion
+//#region #4: приведение типов, оператор присваивания, функции alert, prompt, confirm
+console.log("//#region #4: приведение типов, оператор присваивания, функции alert, prompt, confirm");
+//#region 13. Приведение типов с bool в string
+console.log("//#region 13. Приведение типов с bool в string");
+
+let a3 = true;
+a3 = String(a3); // Сама конвертация в string
+console.log(a3);
+console.log(typeof a3);
+
+//#endregion
+//#region 14. Приведение в Number
+console.log("//#region 14. Приведение в Number");
+
+let a4 = "123";
+let b4 = Number(a4);
+console.log(b4);
+console.log(typeof b4);
+
+// Обрезка, NaN и из bool
+
+console.log(Number("   123   ")); // 123
+console.log(Number("123z"));      // NaN (ошибка чтения числа в "z")
+console.log(Number(true));        // 1
+console.log(Number(false));       // 0
+
+
+//#endregion
+//#region 15. Автоматическое приведение к number при делении
+console.log("//#region 15. Автоматическое приведение к number при делении");
+let z = "6" / "3";
+
+console.log(z);
+console.log(typeof z);
+//#endregion
+//#region 16. Конкатенация
+console.log("//#region 16. Конкатенация");
+console.log("Необходимо быть аккуратным при сложении цифр. Если хоть одна будет определенна как строка, то математического сложения не будет");
+console.log("6" + "3"); //63
+console.log("6" + 3);   //63
+console.log(6 + "3");   //63
+
+console.log(6 + 3);     //9
+
+let a5 = "6", b5 = "3";
+console.log(Number(a5) + Number(b5)); // 9
+
+let z1 = "SomeText";
+console.log(Number(z1)); // NaN
+
+//#endregion
+//#region 17. Приведение к bool
+console.log("//#region 17. Приведение к bool");
+
+console.log(Boolean(1)); // true
+console.log(Boolean("0")); // true
+console.log(Boolean(0)); // false
+console.log(Boolean("Hello!")); // true
+console.log(Boolean("")); // false
+//#endregion
+//#region 18. Оператор присваивания
+console.log("//#region 18. Оператор присваивания");
+
+let a6, b6, c6;
+a6 = b6 = c6 = 2 + 2;
+console.log(a6, b6, c6); //4 4 4
+
+let a7, b7 = 1;
+let c7 = 3 - (a7 = b7 + 1);
+console.log( a7, b7, c7 ); //2 1 1
+
+//#endregion
+//#region 19. Функции alert, prompt, confirm
+console.log("//#region 19. Функции alert, prompt, confirm");
+console.log("Предполагается что запущено в браузере");
+// Alert - Модальное окно
+//alert("Hello");
+
+// Prompt - Ввод данных 
+// Синтаксис: result = prompt(title, [default]);
+// // let age1 = prompt("Сколько вам лет?");
+// let age1 = prompt("Сколько вам лет?", "28");
+// console.log(age1);
+
+// Confirm - модальное окно с вопросом, который возвращает bool. result = confirm(question);
+let isCar = confirm("У тебя есть машина?");
+console.log(isCar);
+
+//#endregion
+
 //#endregion
