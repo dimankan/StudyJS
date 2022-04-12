@@ -175,6 +175,21 @@ console.log(Number(a5) + Number(b5)); // 9
 let z1 = "SomeText";
 console.log(Number(z1)); // NaN
 
+
+console.log(5+"6"); //56
+console.log("6"+10); // 610
+console.log("6.46"+10); //6.4610
+console.log(-2+"1.3"); //-21.3
+
+
+console.log(5+2);       // 7
+console.log(true+10);   // 11
+console.log(null+10);   // 10
+console.log(-2 + +"1.3");// 0.7
+console.log(+"6" + +"3");// 9
+
+console.log(3+2+"2");   //52
+
 //#endregion
 //#region 17. Приведение к bool
 console.log("//#region 17. Приведение к bool");
@@ -226,7 +241,7 @@ let a8 = 1;
 a8=-a8;   //унарный минус // -1
 console.log(a8);
 
-// Порой удобно вместо явной конвертации со string в number использовать унарный оператор
+// Порой удобно вместо явной конвертации в number использовать унарный оператор
 
 let a10 = "5";
 -a10;
@@ -235,6 +250,23 @@ console.log(typeof -a10, -a10); // number -5
 
 let a11 = -a10;
 console.log(typeof a11, a11);
+
+// Также дополнитеьльно можно преобразовывать не только string
+console.log("// Также дополнитеьльно можно преобразовывать не только string");
+
+
+let x1 = true, y1 = null, z2 = undefined;
+console.log(-x1);    // -1
+console.log(-y1);    // -0
+console.log(-z2);     //NaN
+console.log(typeof -x1, typeof -y1, typeof -z2);
+
+// Унарный плюс тоже все пытается перевести в числа, если это возможно:
+console.log("// Унарный плюс тоже все пытается перевести в числа, если это возможно:");
+
+let x3 = "4", y3 = "не число", z3 = true, t = null, u = undefined;
+console.log(typeof +x3, typeof +y3, typeof +z3, typeof +t); // number number number number
+console.log(+x3, +y3, +z3, +t, +u); // 4 NaN 1 0 NaN
 
 //#endregion
 //#region 21. Бинарный минус 
@@ -248,9 +280,56 @@ let xy = x-y;
 console.log(xy); // 4.5
 console.log(typeof x); // string
 console.log(typeof xy); // number
+
+console.log(-2 + +"1.3");// 0.7
+console.log(+"6" + +"3");// 9
+
+console.log(3+2+"2");   //52
+
 //#endregion
-//#region 22. 
-console.log("");
+//#region 22. Операторы * / % ** ++ -- относятся к арифметическим и выполняют автоматическое преобразование выражения к числу.
+console.log("//#region 22. Операторы * / % ** ++ -- относятся к арифметическим и выполняют автоматическое преобразование выражения к числу.");
+
+let x11="2", y11 = 5;
+console.log(x11/y11);   //0.4
+
+console.log(x11*y11);   // 10 
+
+console.log(x11*y11+1.3/6-10); // 0.21666666666666679
+
+console.log(x11*(y11+1.3)/6-10); // -7.9
+
+// Остаток
+console.log("// Остаток");
+
+console.log( 5 % 2 ); // 1, остаток от деления 5 на 2
+console.log( 8 % 3 ); // 2, остаток от деления 8 на 3
+console.log( 6 % 3 ); // 0, остаток от деления 6 на 3
+
+console.log( 5.2 % 2.3 ); // примерно 0.6
+
+// Возведение в степень
+console.log("// Возведение в степень");
+
+console.log( 2 ** 2 ); // 4  (2 * 2)
+console.log( 2 ** 3 ); // 8  (2 * 2 * 2)
+console.log( 4 ** 2 ); // 16  (4 * 4)
+
+console.log( 4 ** (1/2) ); // 2 (степень 1/2 эквивалентна взятию квадратного корня)
+console.log( 8 ** (1/3) ); // 2 (степень 1/3 эквивалентна взятию кубического корня)
+
+//++ (инкремент) и -- (декремент) увеличивают и уменьшают значение переменной на 1:
+console.log("//++ (инкремент) и -- (декремент) увеличивают и уменьшают значение переменной на 1:");
+let counter = 2, cnt = 5;
+counter++; // работает как counter = counter + 1 
+cnt--; // работает как cnt = cnt - 1 
+console.log( counter, cnt ); // 3, 4
+
+let a21, b21, c21 = 10, d21 = 10;
+a21 = c21++;
+b21 = ++d21;
+console.log( a21, b21, c21, d21 );
+
 //#endregion
 //#region 23. 
 console.log("");
