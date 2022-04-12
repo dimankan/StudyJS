@@ -328,20 +328,23 @@ console.log( counter, cnt ); // 3, 4
 let a21, b21, c21 = 10, d21 = 10;
 a21 = c21++;
 b21 = ++d21;
-console.log( a21, b21, c21, d21 );
+console.log( a21, b21, c21, d21 ); // 10 11 11 11
+
+let a13 = 4;
+console.log(2 * ++a13);
+
+// Краткое изменение на определенную велечину
+console.log("// Краткое изменение на определенную велечину");
+
+let a14 = 0, b13 = 1;
+a14 += 5;        // эквивалент: a14 = a14 + 5
+b13 -= 2;        // эквивалент: b13 = b13 - 2
+console.log( a14, b13 );
+a14 *= 10; // эквивалент: a14 = a14 * 10
+b13 /= 4;          // эквивалент: b13 = b13 / 4
+console.log( a14, b13 );
+//#endregion
 
 //#endregion
-//#region 23. 
-console.log("");
-//#endregion
-//#region 24. 
-console.log("");
-//#endregion
-//#region 25. 
-console.log("");
-//#endregion
-//#region 26. 
-console.log("");
-//#endregion
 
-//#endregion
+
