@@ -36,7 +36,7 @@ function OutLogWithInputTwoParam(name, age){
 console.log("Name: " + name + ". Age: " + age);
 }
 //#endregion
-//#region 40. Внешний, внутренний контекст 
+//#region 40. Глобалный, внутренний контекст 
 console.log("//#region 40. Внешний, внутренний контекст");
 
 //"Использование внешнего контекста"
@@ -62,11 +62,31 @@ function ShowMessageInside(text){
 }
 
 //#endregion
-//#region 39. Вызов ф-ии с передачей парамметра
-console.log("");
+//#region 41. Значения по умолчанию
+console.log("//#region 41. Значения по умолчанию");
+
+function showMessageNew(from, text="Как дела?") {
+    let msg = from + " " + email + ": " + text;
+    console.log(msg);
+}
+
+// В стаых версии языка
+function showMessageOld(from, text) {
+    if(text === undefined) text ="Как дела?";
+    let msg = from + " " + email + ": " + text;
+    console.log(msg);
+}
 //#endregion
-//#region 39. Вызов ф-ии с передачей парамметра
-console.log("");
+//#region 42. Возвращаем значение
+console.log("//#region 42. Возвращаем значение");
+
+let sum = Sum(5,7);
+console.log(sum);
+
+function Sum(a, b){
+    return a+b;
+}
+
 //#endregion
 //#region 39. Вызов ф-ии с передачей парамметра
 console.log("");
